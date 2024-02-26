@@ -41,6 +41,14 @@ input::placeholder{
     font-weight:regular;
     font-size:16px;
 }
+input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
 h1{
     font-weight: 500;
     font-size:24px;
