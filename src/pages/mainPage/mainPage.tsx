@@ -13,8 +13,11 @@ export default function MainPage(){
       </SearchContainer>
       <Table>
         <TableHeader>
-
-        <>adw</>
+        <h2 className="foto">FOTO</h2>
+        <h2 className="nome">NOME</h2>
+        <h2 className="cargo">CARGO</h2>
+        <h2 className="data">DATA DE ADMISSÂO</h2>
+        <h2 className="telefone">TELEFONE</h2>
         </TableHeader>
       </Table>
     </Container>

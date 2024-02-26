@@ -47,8 +47,26 @@ h1{
 }
 
 `
-export const TableHeader = styled.div`
+export const TableHeader = styled.div` 
 background-image: linear-gradient(to bottom, ${gradientPrimaryColor},${gradientSecondColor});
 height:47px;
 border-radius:8px 8px 0 0;
+color:white;
+font-weigth:500;
+font-size:16px;
+display:flex;
+align-items:center;
+padding: 0 25px;
+.foto{
+    margin-right:14%;
+}
+.nome{
+    margin-right:20%;
+}
+.cargo {
+    margin-right:14%;
+}
+.data{
+    margin-right:10%;
+}
 `
