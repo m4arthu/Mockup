@@ -1,12 +1,14 @@
-
-function App() {
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import MainPage from "./pages/mainPage/mainPage"
+export default function App() {
 
 
   return (
-    <>
-    dawdawd
-    </>
+     <BrowserRouter>
+      <Routes>
+        <Route path="/" Component={MainPage} />
+      </Routes>
+     </BrowserRouter>
   )
 }
 
-export default App
