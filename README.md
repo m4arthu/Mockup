@@ -4,19 +4,19 @@ Mockup é um visualisador de dados  de empregados  regisrados  previamente em um
 
 # Tecnologias utilizadas:
 
-Vite - Ferramenta de construção do Projeto
-NodeJS - Engine do projeto
-React - Framework
-Typescript - Linguagem de progamação
-Styled Components - Biblioteca para estilização dos components
+Vite - Ferramenta de construção do Projeto <br/>
+NodeJS - Engine do projeto <br/>
+React - Framework <br/>
+Typescript - Linguagem de progamação <br/>
+Styled Components - Biblioteca para estilização dos components <br/>
 
 # Pré-requisitos 
--  ter instalado em sua maquina :
+-  ter instalado em sua maquina : <br/>
    git, nodeJs e npm
 
 # Como rodar 
-- clone este projeto em sua maquina
-- Instale as dependências:
+- clone este projeto em sua maquina <br/>
+- Instale as dependências: 
   ```cmd
   npm  i
   ```
