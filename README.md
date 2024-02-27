@@ -13,6 +13,7 @@ Styled Components - Biblioteca para estilização dos components <br/>
 # Pré-requisitos 
 -  ter instalado em sua maquina : <br/>
    git, nodeJs e npm
+- ter clonado e rodando  na porta 3000 a api deste repositório: https://github.com/BeMobile/desafio-front-end
 
 # Como rodar 
 - clone este projeto em sua maquina <br/>
