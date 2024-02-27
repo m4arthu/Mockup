@@ -5,6 +5,7 @@ import TableLine from "../../components/tableLine/tableLine"
 import { useEffect, useState } from "react"
 import { getEmployees } from "../../services/employees"
 import { GetEmployees } from "../../helpers"
+import Elipse from "../../assets/Ellipse 1.svg"
 export default function MainPage(){
   const [employees,setEmplpyees] = useState<GetEmployees[]>([])
   useEffect(()=>{
@@ -32,7 +33,7 @@ export default function MainPage(){
         <h2 className="cargo">CARGO</h2>
         <h2 className="data">DATA DE ADMISSÂO</h2>
         <h2 className="telefone">TELEFONE</h2>
-        <h2 className="point">.</h2>
+        <img src={Elipse} className="point"/>
         </TableHeader>
         { employees.map((data)=>{
            return <TableLine key={data.id} data={data}/>

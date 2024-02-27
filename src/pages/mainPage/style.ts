@@ -95,14 +95,12 @@ padding: 0 25px;
 }
 
 @media(max-width:650px){
+    justify-content:space-between;
     .point{
         display:block;
     }
-    .nome{
-        width:50%;
-    }
-    .foto{
-        width:45%;
+    div{
+        width:100%;
     }
     .cargo{
         display:none;

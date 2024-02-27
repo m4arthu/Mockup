@@ -1,6 +1,6 @@
 import { TibleLineProps } from "../../helpers";
 import { TableLineContainer } from "./style";
-
+import vector from "../../assets/Vector.svg"
 export default function TableLine({ data }: TibleLineProps) {
     function convertDate(dateString: string) {
         const date = new Date(dateString);
@@ -26,6 +26,7 @@ export default function TableLine({ data }: TibleLineProps) {
             <div className="telefone">
                 <h3>{data.phone}</h3>
             </div>
+           <img src={vector} className="vector" alt="" />
         </TableLineContainer>
     )
 }

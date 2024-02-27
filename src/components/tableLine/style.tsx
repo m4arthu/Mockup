@@ -31,4 +31,30 @@ h3{
 .date{
     width:25%;
 }
+.vector{
+    display:none;
+}
+@media(max-width:650px){
+    padding: 0 15px;
+    .vector{
+        display:block;
+    }
+    .name{
+        display:flex;
+        justify-content:center;
+        width:100%;
+    }
+    .img{
+        width:inherit;
+    }
+    .cargo{
+        display:none;
+    }
+    .date{
+        display:none;
+    }
+    .telefone{
+        display:none;
+    }
+}
 `
