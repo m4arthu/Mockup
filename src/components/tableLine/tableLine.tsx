@@ -7,7 +7,7 @@ export default function TableLine({ data }: TibleLineProps) {
     function convertDate(dateString: string) {
         const date = new Date(dateString);
         const day = String(date.getDate()).padStart(2, '0');
-        const month = String(date.getMonth() + 1).padStart(2, '0'); // getMonth() is zero-based
+        const month = String(date.getMonth() + 1).padStart(2, '0');
         const year = date.getFullYear();
         return `${day}/${month}/${year}`;
     }
@@ -38,20 +38,22 @@ export default function TableLine({ data }: TibleLineProps) {
                     <div className="telefone">
                         <h3>{data.phone}</h3>
                     </div>
-                    <img src={vector} onClick={open} className="vector" alt="" />
+                    {opened ?<img src={vector} onClick={open} className="vector rotated" alt="" /> :
+                     <img src={vector} onClick={open} className="vector" alt="" />    
+                    }
                 </div>
                 {opened ? <div className="details">
                     <div className="content">
-                     <h2>Cargo</h2>
-                     <p>{data.job}</p>
+                        <h2>Cargo</h2>
+                        <p>{data.job}</p>
                     </div>
                     <div className="content">
-                     <h2>Data de admissão</h2>
-                     <p>{convertDate(data.admission_date)}</p>
+                        <h2>Data de admissão</h2>
+                        <p>{convertDate(data.admission_date)}</p>
                     </div>
                     <div className="content">
-                     <h2>Telefone</h2>
-                     <p>{data.phone}</p>
+                        <h2>Telefone</h2>
+                        <p>{data.phone}</p>
                     </div>
                 </div> : ""}
             </TableLineContainer>
