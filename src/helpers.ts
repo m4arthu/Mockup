@@ -6,3 +6,7 @@ export type GetEmployees = {
     phone: string,
     image: string
 }
+
+export type TibleLineProps = {
+    data:GetEmployees
+}

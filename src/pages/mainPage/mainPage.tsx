@@ -1,7 +1,21 @@
 import Header from "../../components/header/Header"
 import { Container, Table, SearchContainer, TableHeader } from "./style"
 import searchIcon  from "../../assets/Search.svg"
+import TableLine from "../../components/tableLine/tableLine"
+import { useEffect, useState } from "react"
+import { getEmployees } from "../../services/employees"
+import { GetEmployees } from "../../helpers"
 export default function MainPage(){
+  const [employees,setEmplpyees] = useState<GetEmployees[]>([])
+  useEffect(()=>{
+    (async ()=>{
+      const employees = await getEmployees()
+      setEmplpyees(employees.data)
+    })()
+  })
+  if(employees.length === 0){
+    return <>Loading...</>
+  }
   return (
     <>
     <Header/>
@@ -18,7 +32,12 @@ export default function MainPage(){
         <h2 className="cargo">CARGO</h2>
         <h2 className="data">DATA DE ADMISSÂO</h2>
         <h2 className="telefone">TELEFONE</h2>
+        <h2 className="point">.</h2>
         </TableHeader>
+        { employees.map((data)=>{
+           return <TableLine key={data.id} data={data}/>
+        })
+        }
       </Table>
     </Container>
     </>
