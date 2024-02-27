@@ -3,6 +3,7 @@ import { searchInputColor, tableLineBorderColor } from "../../config/constants";
 
 export const TableLineContainer = styled.div`
 border: 1px solid ${tableLineBorderColor};
+border-top:inherit;
 background-color:white;
 .content{
 width:80%;
