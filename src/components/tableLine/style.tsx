@@ -13,6 +13,9 @@ display:flex;
 align-items:center;
 justify-content:left;
 }
+.rotated{
+    transform:  rotateX(180deg);
+}
 h3{
     font-weight:400,
     font-size:16px;
