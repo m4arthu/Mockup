@@ -1,5 +1,5 @@
 import styled from  "styled-components"
-import { MainBodyBackground, gradientPrimaryColor, gradientSecondColor, searchInputColor, searchPlaceHolderColor } from "../../config/constants"
+import { MainBodyBackground, gradientPrimaryColor, gradientSecondColor, searchInputColor, searchPlaceHolderColor, serachContainerH1 } from "../../config/constants"
 
 export const Container = styled.div`
 font-family: "Roboto", sans-serif;
@@ -50,8 +50,20 @@ input::-webkit-search-cancel-button {
   display: none;
 }
 h1{
+    color: ${serachContainerH1};
     font-weight: 500;
     font-size:24px;
+}
+
+@media(max-width:650px){
+    flex-direction:column;
+    align-items:start;
+    margin-top:20px;
+    margin-bottom:15px;
+    input{
+        margin-top:20px;
+        width:100%;
+    }
 }
 
 `
@@ -64,17 +76,40 @@ font-weigth:500;
 font-size:16px;
 display:flex;
 align-items:center;
+justify-content:left;
 padding: 0 25px;
+.point{
+    display:none
+}
 .foto{
-    margin-right:14%;
+    width:17%;
 }
 .nome{
-    margin-right:20%;
+    width:24%;
 }
-.cargo {
-    margin-right:14%;
+.cargo{
+    width:19%;
 }
 .data{
-    margin-right:10%;
+    width:25%;
+}
+
+@media(max-width:650px){
+    justify-content:space-between;
+    .point{
+        display:block;
+    }
+    div{
+        width:100%;
+    }
+    .cargo{
+        display:none;
+    }
+    .telefone{
+        display:none;
+    }
+    .data{
+        display:none;
+    }
 }
 `
