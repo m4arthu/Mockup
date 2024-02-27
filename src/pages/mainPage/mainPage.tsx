@@ -51,7 +51,12 @@ export default function MainPage() {
       <Container>
         <SearchContainer>
           <h1>Funcionários</h1>
-          <input ref={searchTerm} placeholder="Pesquisar" type="search" ></input>
+          <input ref={searchTerm}  onKeyDown={(e)=>{
+            if(e.key === "Enter"){
+              e.preventDefault();
+              search()
+            }
+          }} placeholder="Pesquisar" type="search" />
           <img onClick={search} src={searchIcon} alt="" className="searchIcon" />
         </SearchContainer>
         <Table>

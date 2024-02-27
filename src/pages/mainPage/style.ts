@@ -4,7 +4,7 @@ import { MainBodyBackground, gradientPrimaryColor, gradientSecondColor, searchIn
 export const Container = styled.div`
 font-family: "Roboto", sans-serif;
 width:100vw;
-height:100vh;
+height:100%;
 display:flex;
 align-items:center;
 background-color:${MainBodyBackground};
@@ -13,6 +13,7 @@ flex-direction:column;
 
 export const Table = styled.div`
 width:80%;
+padding-bottom:20px;
 `
 
 export const SearchContainer = styled.div`
