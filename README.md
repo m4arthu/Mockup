@@ -3,7 +3,7 @@
 Mockup é um visualisador de dados  de empregados  regisrados  previamente em um banco de dados,com um design intuitivo e responsivo
 
 # Deploy 
-ps: a api  entra em stand-by por usar o  serviço free do render então as vezes o primeiro carregamento pode ser lento!! 
+ps: a api  entra em stand-by por usar o  serviço free do render então as vezes o primeiro carregamento pode ser lento (5-10 min)!! 
 https://mockup-nwjzwvwq3-m4arthu.vercel.app
 # Tecnologias utilizadas:
 
