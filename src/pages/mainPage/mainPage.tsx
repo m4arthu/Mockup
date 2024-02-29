@@ -8,6 +8,7 @@ import { GetEmployees } from "../../helpers"
 import Elipse from "../../assets/Ellipse 1.svg"
 export default function MainPage() {
   const [employees, setEmplpyees] = useState<GetEmployees[]>([])
+  const [employeesFromApi,setEmplpyeesFromApi] = useState<GetEmployees[]>([])
   const searchTerm = useRef<HTMLInputElement>(null)
   useEffect(() => {
     getEmployeesFunction()
@@ -18,16 +19,17 @@ export default function MainPage() {
   async function getEmployeesFunction (){
     const employees = await getEmployees()
     setEmplpyees(employees.data)
+    setEmplpyeesFromApi(employees.data)
   }
   function search() {
     const term = searchTerm.current?.value
     if (term) {
-      var findInEmplyees = employees.filter((value) => value.name.toLowerCase().includes(term.toLowerCase()))
+      var findInEmplyees = employeesFromApi.filter((value) => value.name.toLowerCase().includes(term.toLowerCase()))
       if (findInEmplyees.length === 0) {
-        findInEmplyees = employees.filter((value) => value.job.toLowerCase().includes(term.toLowerCase()))
+        findInEmplyees = employeesFromApi.filter((value) => value.job.toLowerCase().includes(term.toLowerCase()))
       }
       if (findInEmplyees.length === 0) {
-        findInEmplyees = employees.filter((value) => value.phone.toLowerCase().includes(term.toLowerCase()))
+        findInEmplyees = employeesFromApi.filter((value) => value.phone.toLowerCase().includes(term.toLowerCase()))
       }
       if (findInEmplyees.length === 0) {
         (async () => {
