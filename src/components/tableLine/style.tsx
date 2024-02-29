@@ -28,16 +28,16 @@ h3{
         height:34px;
         border-radius:100%;
     } 
-    width:18%;
+    width:17%;
 }
 .name{
-    width:25%;
-}
-.cargo{
     width:21%;
 }
+.cargo{
+    width:19%;
+}
 .date{
-    width:25%;
+    width:22%;
 }
 .telefone{
     margin-right:15px;

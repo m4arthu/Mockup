@@ -11,6 +11,9 @@ export default function TableLine({ data }: TibleLineProps) {
         const year = date.getFullYear();
         return `${day}/${month}/${year}`;
     }
+    function formatPhoneNumber(number:string) {
+          return `+${number.slice(0, 2)} (${number.slice(2, 4)}) ${number.slice(4, 7)}-${number.slice(7, 11)}-${number.slice(11, 13)}`;
+      }
 
     function open() {
         if (opened) {
@@ -36,7 +39,7 @@ export default function TableLine({ data }: TibleLineProps) {
                         <h3>{convertDate(data.admission_date)}</h3>
                     </div>
                     <div className="telefone">
-                        <h3>{data.phone}</h3>
+                        <h3>{formatPhoneNumber(data.phone)}</h3>
                     </div>
                     {opened ?<img src={vector} onClick={open} className="vector rotated" alt="" /> :
                      <img src={vector} onClick={open} className="vector" alt="" />    
@@ -53,7 +56,7 @@ export default function TableLine({ data }: TibleLineProps) {
                     </div>
                     <div className="content">
                         <h2>Telefone</h2>
-                        <p>{data.phone}</p>
+                        <p>{formatPhoneNumber(data.phone)}</p>
                     </div>
                 </div> : ""}
             </TableLineContainer>

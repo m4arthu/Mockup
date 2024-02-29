@@ -83,10 +83,10 @@ padding: 0 25px;
     display:none
 }
 .foto{
-    width:17%;
+    width:15%;
 }
 .nome{
-    width:24%;
+    width:22%;
 }
 .cargo{
     width:19%;
