@@ -16,8 +16,13 @@ export default function MainPage() {
     return <>Loading...</>
   }
   async function getEmployeesFunction (){
-    const employees = await getEmployees()
-    setEmplpyees(employees.data)
+    try{
+      const employees = await getEmployees()
+      setEmplpyees(employees.data)
+    }catch(e){
+      alert("algo deu errado  ao buscar os dados da api verifique se a ela esta rodando na porta 3000")
+    }
+
   }
   async function  search() {
     await getEmployeesFunction()
@@ -31,13 +36,14 @@ export default function MainPage() {
         findInEmplyees = employees.filter((value) => value.phone.toLowerCase().includes(term.toLowerCase()))
       }
       if (findInEmplyees.length === 0) {
+        alert("nada encontrado")
         getEmployeesFunction()
       } else {
         console.log(findInEmplyees)
         setEmplpyees([...findInEmplyees])
       }
     } else {
-      alert("nada encontrado")
+      alert("nenhum termo pesquisado !!")
       getEmployeesFunction()
     }
   }
