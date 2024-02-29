@@ -24,6 +24,10 @@ Styled Components - Biblioteca para estilização dos components <br/>
   ```cmd
   npm  i
   ```
+- Crie um arquivo  chamado .env  e nele coloque o endereço da api rodando localmente numa variável chamada VITE_API_URL
+  ```cmd
+   VITE_API_URL = 'http://localhost:3000'
+  ```
 - Inicie o  projeto:
   ```cmd
   npm run dev
