@@ -4,7 +4,7 @@ import { MainBodyBackground, gradientPrimaryColor, gradientSecondColor, searchIn
 export const Container = styled.div`
 font-family: "Roboto", sans-serif;
 width:100vw;
-height:100%;
+height:110vh;
 display:flex;
 align-items:center;
 background-color:${MainBodyBackground};
