@@ -5,6 +5,15 @@ Mockup é um visualisador de dados  de empregados  regisrados  previamente em um
 # Deploy 
 ps: a api  entra em stand-by por usar o  serviço free do render então as vezes o primeiro carregamento pode ser lento (5-10 min)!! 
 [https://mockup-nwjzwvwq3-m4arthu.vercel.app](https://mockup-ashen.vercel.app)
+
+#Views do app:
+- Mobile </br>
+![image](https://github.com/m4arthu/Mockup/assets/102080715/4d5956fd-a3c3-46cd-b43c-54f3895524fb)]
+
+- Desktop </br>
+![image](https://github.com/m4arthu/Mockup/assets/102080715/9e927d14-f492-4efc-ad47-208faf893598)
+
+
 # Tecnologias utilizadas:
 
 Vite - Ferramenta de construção do Projeto <br/>
